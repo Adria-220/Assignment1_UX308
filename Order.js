@@ -1,17 +1,17 @@
 let currentState = welcoming;
 
 const menu = {
-  pizza: {
-    sizes: ["small", "medium", "large"],
-    toppings: ["pepperoni", "mushroom", "cheese"]
+  hotdog: {
+    sizes: ["standard", "jumbo", "footlong"],
+    toppings: ["ketchup", "mustard", "cheese"]
   },
   burger: {
     sizes: ["single", "double"],
-    toppings: ["lettuce", "tomato", "bacon"]
+    toppings: ["lettuce", "cheese", "bacon"]
   }
 };
 
-const drinks = ["coke", "sprite", "water"];
+const drinks = ["pepsi", "7up", "iced tea"];
 
 let order = [];
 
@@ -28,8 +28,8 @@ function welcoming() {
   let aReturn = [];
   currentState = ordering;
 
-  aReturn.push("Welcome to Dream Takeout!");
-  aReturn.push("What would you like? (pizza or burger)");
+  aReturn.push("Welcome to The hotdog shack!");
+  aReturn.push("What would you like? (hotdog or burger)");
 
   return aReturn;
 }
@@ -48,7 +48,7 @@ function ordering(sInput) {
 
   } else {
 
-    aReturn.push("Sorry, we only have pizza or burger.");
+    aReturn.push("Sorry, we only have hotdog or burger.");
 
   }
 
